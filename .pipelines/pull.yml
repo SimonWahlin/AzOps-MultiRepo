@@ -34,17 +34,17 @@ schedules:
 
 resources:
     repositories:
-  - repository: AzOps
-    name: AzOps-Infrastructure
-    type: git
-    ref: main
-  pipelines:
-    - pipeline: 'Pull'
-      source: 'AzOps - Push'
-      trigger:
-        branches:
-          include:
-            - main
+    - repository: AzOps
+      name: AzOps-Infrastructure
+      type: git
+      ref: main
+    pipelines:
+      - pipeline: 'Pull'
+        source: 'AzOps - Push'
+        trigger:
+          branches:
+            include:
+              - main
 
 variables:
   

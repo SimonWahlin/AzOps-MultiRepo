@@ -12,10 +12,10 @@ trigger: none
 
 resources:
   repositories:
-    - repository: AzOps
-      name: AzOps-Infrastructure
-      type: git
-      ref: main
+  - repository: AzOps
+    name: AzOps-Infrastructure
+    type: git
+    ref: main
 
 variables:
     
