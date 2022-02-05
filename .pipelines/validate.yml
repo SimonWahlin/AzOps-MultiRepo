@@ -10,6 +10,13 @@ name: "AzOps - Validate"
 
 trigger: none
 
+resources:
+  repositories:
+    - repository: AzOps
+      name: AzOps-Infrastructure
+      type: git
+      ref: main
+
 variables:
     
   #

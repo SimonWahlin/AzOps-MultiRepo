@@ -8,13 +8,23 @@ name: "AzOps - Push"
 # disable CI triggers with overrides.
 #
 
-trigger:
-  branches:
-    include:
-      - main
-  paths:
-    include:
-      - root
+resources:
+  repositories:
+  - repository: AzOps
+    name: AzOps-Infrastructure
+    type: git
+    ref: main
+    trigger:
+      branches:
+        include:
+          - main
+      paths:
+        include:
+          - root
+
+# Since we trigger on other repo we need to disable 
+# the trigger here.
+trigger: none
 
 variables:
 

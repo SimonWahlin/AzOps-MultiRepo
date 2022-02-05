@@ -33,6 +33,11 @@ schedules:
 #
 
 resources:
+    repositories:
+  - repository: AzOps
+    name: AzOps-Infrastructure
+    type: git
+    ref: main
   pipelines:
     - pipeline: 'Pull'
       source: 'AzOps - Push'
